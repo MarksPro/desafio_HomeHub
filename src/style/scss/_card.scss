@@ -15,14 +15,14 @@
     p {
       display: flex;
       justify-content: space-between;
-    }
-  }
+    } // End Conteudo Card
+  } // End Container card
 
   &:hover {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.74);
-  }
+  } // End Efeito de sombras
 
   &:last-child {
     display: none;
   }
-}
+} // End Card item
