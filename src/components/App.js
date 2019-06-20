@@ -58,9 +58,7 @@ class App extends React.Component {
     }, 1000);
   }
   render(){
-    console.log(this.state.carFilter);
     return (
-      
       <InfiniteScroll
           dataLength={this.state.listCar.length}
           next={this.fetchMoreData}
