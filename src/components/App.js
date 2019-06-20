@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
-import Header from './Header'
+import Header from './Header';
+import SideNav from './SideNav';
 import InfiniteScroll from "react-infinite-scroll-component";
 import '../style/css/style.css'
 
@@ -52,12 +53,17 @@ class App extends React.Component {
             </p>
           }
         >
-        <Header />
-          <ul>
-            {this.state.listCar.map((i, index) => (
-              <Card key={index} carList={i}/>
-            ))}
-          </ul>
+
+          <Header />
+
+          <div className="containerSection">
+            <SideNav />
+            <ul>
+              {this.state.listCar.map((i, index) => (
+                <Card key={index} carList={i}/>
+              ))}
+            </ul>
+          </div>
         </InfiniteScroll>
       );
   }

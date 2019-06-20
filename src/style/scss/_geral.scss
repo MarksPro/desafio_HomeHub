@@ -6,16 +6,16 @@
 }
 
 ul {
-  margin-top: 80px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 300px;
 }
 
 .fim {
   padding: 20px;
-  margin: 20px;
+  margin: 20px 60px 40px 370px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.171);
 }
 
@@ -25,6 +25,7 @@ span.carregando {
   width: 0%;
   height: 10px;
   animation: animateSquare .3s forwards;
+  margin-left: 345px;
 }
 
 @keyframes animateSquare {
@@ -32,6 +33,6 @@ span.carregando {
     width: 0%;
   }
   100% {
-    width: 100%;
+    width: 70%;
   }
 }
