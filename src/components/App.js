@@ -44,9 +44,9 @@ class App extends React.Component {
           dataLength={this.state.listCar.length}
           next={this.fetchMoreData}
           hasMore={this.state.hasMore}
-          loader={<h4>Carregando...</h4>}
+          loader={<span className="carregando"></span>}
           endMessage={
-            <p style={{ textAlign: "center" }}>
+            <p className="fim" style={{ textAlign: "center" }}>
               <b>Fim da lista de produtos</b>
             </p>
           }

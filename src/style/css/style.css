@@ -18,6 +18,40 @@ ul {
           justify-content: center;
 }
 
+.fim {
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.171);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.171);
+}
+
+span.carregando {
+  display: block;
+  background-color: tomato;
+  width: 0%;
+  height: 10px;
+  -webkit-animation: animateSquare .3s forwards;
+          animation: animateSquare .3s forwards;
+}
+
+@-webkit-keyframes animateSquare {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animateSquare {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .carItem {
   width: 100%;
   max-width: 300px;
