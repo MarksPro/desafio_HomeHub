@@ -11,9 +11,28 @@ class App extends React.Component {
     super(props);
     this.state = {
       listCar: [],
-      hasMore: true
+      hasMore: true,
+      selectCar: '',
+      carFilter: []
     };
     this.listJson();
+    this.selectCarFn = this.selectCarFn.bind(this);
+  }
+
+  filterCar(){
+   this.setState({
+     carFilter: this.state.listCar.filter(car => {
+       return car.car_make === this.state.selectCar;
+     })
+   })
+  }
+
+  selectCarFn(param){
+    this.setState({
+      selectCar: param
+    }, () => {
+      this.filterCar()
+    })
   }
 
   listJson(){
@@ -38,8 +57,8 @@ class App extends React.Component {
       });
     }, 1000);
   }
-
   render(){
+    console.log(this.state.carFilter);
     return (
       
       <InfiniteScroll
@@ -57,10 +76,13 @@ class App extends React.Component {
           <Header />
 
           <div className="containerSection">
-            <SideNav />
+            <SideNav carList={this.state.listCar} carFn={this.selectCarFn} />
             <ul>
-              {this.state.listCar.map((i, index) => (
-                <Card key={index} carList={i}/>
+            {this.state.carFilter.map((car, index) => (
+                <Card key={index} carList={car}/>
+              ))}
+              {this.state.listCar.map((car, index) => (
+                <Card key={index} carList={car}/>
               ))}
             </ul>
           </div>
